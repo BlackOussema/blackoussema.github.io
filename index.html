@@ -1,157 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CyberRescue | Free Help Against Blackmail</title>
-
-<style>
-    :root {
-        --bg:#0d1320;
-        --card:#111a2b;
-        --text:#e9f1ff;
-        --muted:#9aa4b2;
-        --accent:#2b9fff;
-        --accent-hover:#1983e6;
-    }
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
-    header{background:#0a1527;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.05);}
-    header h1{font-size:22px;font-weight:600;}
-    nav button{background:var(--accent);color:#fff;border:none;padding:8px 14px;border-radius:8px;margin-left:8px;font-weight:600;cursor:pointer;transition:0.25s;}
-    nav button:hover{background:var(--accent-hover);}
-    .container{max-width:900px;margin:32px auto;padding:0 18px;}
-    .card{background:var(--card);padding:24px;border-radius:14px;border:1px solid rgba(255,255,255,0.06);margin-bottom:22px;}
-    .profile{display:flex;gap:20px;align-items:center;}
-    .profile img{width:170px;height:170px;object-fit:cover;border-radius:14px;border:2px solid rgba(255,255,255,0.10);box-shadow:0 0 14px rgba(0,0,0,0.35);}
-    .profile .meta h3{font-size:22px;margin-bottom:6px;font-weight:700;}
-    .caption{font-size:14px;color:var(--muted);}
-    ul{margin-top:10px;padding-left:20px;}
-    footer{text-align:center;padding:22px;margin-top:40px;font-size:14px;background:#08121f;border-top:1px solid rgba(255,255,255,0.06);}
-    input,textarea{width:100%;padding:10px;border-radius:8px;border:none;background:#0a1323;color:white;margin:6px 0;}
-    button.send{background:var(--accent);border:none;color:white;padding:10px 18px;margin-top:8px;border-radius:8px;cursor:pointer;font-weight:600;transition:0.25s;}
-    button.send:hover{background:var(--accent-hover);}
-    label{font-size:14px;color:var(--muted);}
-    /* Responsive */
-    @media(max-width:650px){.profile{flex-direction:column;text-align:center;}.profile img{width:130px;height:130px;}}
-</style>
-
-<script>
-function switchLang(lang){
-    document.documentElement.lang = lang;
-    document.getElementById("en").style.display = (lang==="en") ? "block" : "none";
-    document.getElementById("ar").style.display = (lang==="ar") ? "block" : "none";
-}
-window.onload = ()=> switchLang("en");
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield TN – Help & Support</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0a0f1c;
+            color: #e6e6e6;
+        }
+        header {
+            background: #121829;
+            padding: 20px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            border-bottom: 1px solid #1e2a43;
+        }
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #121829;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #1e2a43;
+        }
+        h2 {
+            margin-bottom: 10px;
+            color: #4cb8ff;
+        }
+        ul li {
+            margin: 8px 0;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            margin: 10px 0 18px;
+            background: #0c1324;
+            color: white;
+            font-size: 15px;
+            outline: none;
+        }
+        input:focus, textarea:focus {
+            border: 1px solid #3ca9ff;
+        }
+        button {
+            background: #3ca9ff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        button:hover {
+            background: #1f8de3;
+        }
+        footer {
+            text-align: center;
+            color: #8290aa;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-    <h1>CyberRescue</h1>
-    <nav>
-        <button onclick="switchLang('en')">English</button>
-        <button onclick="switchLang('ar')">العربية</button>
-    </nav>
-</header>
+<header>CyberShield TN</header>
 
-<main class="container">
-
-<!-- ENGLISH -->
-<section id="en">
-    <div class="card profile">
-        <img src="myphoto.jpg.jpg" alt="Ghariani Oussema Photo">
-        <div class="meta">
-            <h3>Ghariani Oussema</h3>
-            <p class="caption">Cybersecurity Specialist helping victims of online blackmail — Free & Safe.</p>
-            <p style="margin-top:8px;color:var(--muted)">We never request intimate content or passwords.</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>Free Help Against Digital Blackmail</h2>
-        <p>You are not alone. We will protect your privacy and guide you safely.</p>
-    </div>
-
-    <div class="card">
-        <h3>Immediate Safety Steps</h3>
-        <ul>
-            <li>Do NOT reply to the blackmailer</li>
-            <li>Capture screenshots as evidence</li>
-            <li>Enable Two-Factor Authentication</li>
-            <li>Never send money or personal content</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h3>Contact Us — Secure & Anonymous</h3>
-        <form action="https://formsubmit.co/CyberShield-TN@proton.me" method="POST">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="sent.html">
-
-            <label>Your Email (optional)</label>
-            <input type="email" name="email" placeholder="contact@example.com">
-
-            <label>Your Message</label>
-            <textarea name="message" placeholder="Describe your situation safely..." required></textarea>
-
-            <button class="send" type="submit">Send Message</button>
-        </form>
-    </div>
+<section>
+    <h2>Immediate Safety Steps</h2>
+    <ul>
+        <li>Do NOT reply to the blackmailer.</li>
+        <li>Capture screenshots as evidence.</li>
+        <li>Enable Two-Factor Authentication.</li>
+        <li>Never send money or personal content.</li>
+    </ul>
 </section>
 
+<section>
+    <h2>Contact Us</h2>
+    <p>If you need urgent help, send us a message. We reply securely and anonymously.</p>
 
-<!-- ARABIC -->
-<section id="ar" style="display:none;direction:rtl;text-align:right">
-    <div class="card profile">
-        <img src="myphoto.jpg.jpg" alt="صورة غرياني أسامة">
-        <div class="meta">
-            <h3>غرياني أسامة</h3>
-            <p class="caption">مختص في الأمن السيبراني — أساعد ضحايا الابتزاز الإلكتروني مجانًا وبأمان.</p>
-            <p style="margin-top:8px;color:var(--muted)">لا نطلب أي صور خاصة أو كلمات مرور.</p>
-        </div>
-    </div>
+    <form action="https://formspree.io/f/xpwlrzka" method="POST">
+        <input type="email" name="email" placeholder="Your Email (optional)">
+        <textarea name="message" placeholder="Your Message" required></textarea>
 
-    <div class="card">
-        <h2>مساعدة مجانية ضد الابتزاز الإلكتروني</h2>
-        <p>لســت وحــدك. نحمي خصوصيتك ونرشدك في خطوات آمنة.</p>
-    </div>
+        <!-- Redirect after sending -->
+        <input type="hidden" name="_redirect" value="https://blackoussema.github.io/sent.html">
 
-    <div class="card">
-        <h3>خطوات عاجلة</h3>
-        <ul>
-            <li>لا ترد على المبتز</li>
-            <li>احتفظ بلقطات شاشة كدليل</li>
-            <li>فعّل التحقق بخطوتين</li>
-            <li>لا ترسل أي مال أو محتوى شخصي</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h3>اتصل بنا — سري وآمن</h3>
-        <form action="https://formsubmit.co/CyberShield-TN@proton.me" method="POST">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="sent.html">
-
-            <label>بريدك الإلكتروني (اختياري)</label>
-            <input type="email" name="email" placeholder="contact@example.com" style="direction:ltr">
-
-            <label>رسالتك</label>
-            <textarea name="message" placeholder="اشرح وضعك بأمان..." required></textarea>
-
-            <button class="send" type="submit">إرسال</button>
-        </form>
-    </div>
+        <button type="submit">Send Message</button>
+    </form>
 </section>
 
-</main>
-
-<footer>
-    © CyberRescue — Free Protection Against Blackmail<br>
-    Made by <strong>Ghariani Oussema</strong> — Tunisia
-</footer>
+<footer>© 2025 CyberShield TN by Ghariani Oussema – Support & Protection</footer>
 
 </body>
 </html>
-
