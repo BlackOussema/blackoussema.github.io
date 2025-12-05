@@ -14,61 +14,31 @@
         --accent:#2b9fff;
         --accent-hover:#1983e6;
     }
-    *{ box-sizing:border-box; margin:0; padding:0; }
-    body{
-        font-family:Inter, system-ui, sans-serif;
-        background:var(--bg);
-        color:var(--text);
-        line-height:1.6;
-    }
-    header{
-        background:#0a1527;
-        padding:16px 24px;
-        display:flex;justify-content:space-between;align-items:center;
-        border-bottom:1px solid rgba(255,255,255,0.05);
-    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+    header{background:#0a1527;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.05);}
     header h1{font-size:22px;font-weight:600;}
-    nav button{
-        background:var(--accent);color:#fff;border:none;
-        padding:8px 14px;border-radius:8px;cursor:pointer;
-        margin-left:8px;font-weight:600;transition:0.25s;
-    }
+    nav button{background:var(--accent);color:#fff;border:none;padding:8px 14px;border-radius:8px;margin-left:8px;font-weight:600;cursor:pointer;transition:0.25s;}
     nav button:hover{background:var(--accent-hover);}
-    .container{
-        max-width:900px;margin:32px auto;padding:0 18px;
-    }
-    .card{
-        background:var(--card);
-        padding:24px;border-radius:14px;
-        border:1px solid rgba(255,255,255,0.06);
-        margin-bottom:22px;
-    }
+    .container{max-width:900px;margin:32px auto;padding:0 18px;}
+    .card{background:var(--card);padding:24px;border-radius:14px;border:1px solid rgba(255,255,255,0.06);margin-bottom:22px;}
     .profile{display:flex;gap:20px;align-items:center;}
-    .profile img{
-        width:170px;height:170px;object-fit:cover;
-        border-radius:14px;border:2px solid rgba(255,255,255,0.10);
-        box-shadow:0 0 14px rgba(0,0,0,0.35);
-    }
+    .profile img{width:170px;height:170px;object-fit:cover;border-radius:14px;border:2px solid rgba(255,255,255,0.10);box-shadow:0 0 14px rgba(0,0,0,0.35);}
     .profile .meta h3{font-size:22px;margin-bottom:6px;font-weight:700;}
     .caption{font-size:14px;color:var(--muted);}
     ul{margin-top:10px;padding-left:20px;}
-    footer{
-        text-align:center;padding:22px;margin-top:40px;
-        font-size:14px;background:#08121f;
-        border-top:1px solid rgba(255,255,255,0.06);
-    }
-
+    footer{text-align:center;padding:22px;margin-top:40px;font-size:14px;background:#08121f;border-top:1px solid rgba(255,255,255,0.06);}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:none;background:#0a1323;color:white;margin:6px 0;}
+    button.send{background:var(--accent);border:none;color:white;padding:10px 18px;margin-top:8px;border-radius:8px;cursor:pointer;font-weight:600;transition:0.25s;}
+    button.send:hover{background:var(--accent-hover);}
+    label{font-size:14px;color:var(--muted);}
     /* Responsive */
-    @media(max-width:650px){
-        .profile{flex-direction:column;text-align:center;}
-        .profile img{width:130px;height:130px;}
-        .profile .meta{text-align:center;}
-    }
+    @media(max-width:650px){.profile{flex-direction:column;text-align:center;}.profile img{width:130px;height:130px;}}
 </style>
 
 <script>
 function switchLang(lang){
-    document.querySelector("html").lang = lang;
+    document.documentElement.lang = lang;
     document.getElementById("en").style.display = (lang==="en") ? "block" : "none";
     document.getElementById("ar").style.display = (lang==="ar") ? "block" : "none";
 }
@@ -77,6 +47,7 @@ window.onload = ()=> switchLang("en");
 </head>
 
 <body>
+
 <header>
     <h1>CyberRescue</h1>
     <nav>
@@ -90,20 +61,17 @@ window.onload = ()=> switchLang("en");
 <!-- ENGLISH -->
 <section id="en">
     <div class="card profile">
-        <img src="./myphoto.jpg.jpg" alt="Gariani Oussema Photo">
+        <img src="myphoto.jpg.jpg" alt="Ghariani Oussema Photo">
         <div class="meta">
             <h3>Ghariani Oussema</h3>
-            <p class="caption">Cybersecurity Specialist helping victims of online blackmail, completely free.</p>
-            <p style="margin-top:8px;color:var(--muted)">
-                Secure & anonymous guidance: collecting evidence, account protection, reporting steps.
-                We never request intimate content or passwords.
-            </p>
+            <p class="caption">Cybersecurity Specialist helping victims of online blackmail — Free & Safe.</p>
+            <p style="margin-top:8px;color:var(--muted)">We never request intimate content or passwords.</p>
         </div>
     </div>
 
     <div class="card">
         <h2>Free Help Against Digital Blackmail</h2>
-        <p>If you are being threatened online, you are not alone. We will protect your privacy and guide you safely.</p>
+        <p>You are not alone. We will protect your privacy and guide you safely.</p>
     </div>
 
     <div class="card">
@@ -115,60 +83,65 @@ window.onload = ()=> switchLang("en");
             <li>Never send money or personal content</li>
         </ul>
     </div>
+
     <div class="card">
-    <h3>Contact Us</h3>
-    <p>If you need urgent help, send us a message. We reply securely and anonymously.</p>
+        <h3>Contact Us — Secure & Anonymous</h3>
+        <form action="https://formsubmit.co/CyberShield-TN@proton.me" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="sent.html">
 
-    <form action="https://formsubmit.co/cybershield-tn@proton.me" method="POST">
-        
-        <!-- Redirect after sent -->
-        <input type="hidden" name="_next" value="https://blackoussema.github.io/sent.html">
+            <label>Your Email (optional)</label>
+            <input type="email" name="email" placeholder="contact@example.com">
 
-        <!-- Disable Captcha -->
-        <input type="hidden" name="_captcha" value="false">
+            <label>Your Message</label>
+            <textarea name="message" placeholder="Describe your situation safely..." required></textarea>
 
-        <label>Your Email (optional)</label>
-        <input type="email" name="email" placeholder="CyberShield-TN@proton.me" style="width:100%;padding:10px;margin:6px 0;border-radius:8px;border:none;background:#0a1323;color:white;">
-
-        <label>Your Message</label>
-        <textarea name="message" required placeholder="Describe the situation safely..." style="width:100%;height:120px;padding:10px;margin:6px 0;border-radius:8px;border:none;background:#0a1323;color:white;"></textarea>
-
-        <button type="submit" style="background:var(--accent);border:none;color:white;padding:10px 18px;margin-top:8px;border-radius:8px;cursor:pointer;">
-            Send Message
-        </button>
-    </form>
-</div>
-
+            <button class="send" type="submit">Send Message</button>
+        </form>
+    </div>
 </section>
 
 
 <!-- ARABIC -->
-<section id="ar" style="direction:rtl;text-align:right;display:none">
+<section id="ar" style="display:none;direction:rtl;text-align:right">
     <div class="card profile">
-        <img src="./myphoto.jpg.jpg" alt="صورة غرياني أسامة">
+        <img src="myphoto.jpg.jpg" alt="صورة غرياني أسامة">
         <div class="meta">
             <h3>غرياني أسامة</h3>
-            <p class="caption">مختص في الأمن السيبراني — أساعد ضحايا الابتزاز الإلكتروني مجانًا.</p>
-            <p style="margin-top:8px;color:var(--muted)">
-                إرشاد سري وآمن: جمع الأدلة، تأمين الحسابات، وخطوات الإبلاغ للجهات المختصة.
-                لا نطلب صورًا خاصة ولا كلمات مرور.
-            </p>
+            <p class="caption">مختص في الأمن السيبراني — أساعد ضحايا الابتزاز الإلكتروني مجانًا وبأمان.</p>
+            <p style="margin-top:8px;color:var(--muted)">لا نطلب أي صور خاصة أو كلمات مرور.</p>
         </div>
     </div>
 
     <div class="card">
         <h2>مساعدة مجانية ضد الابتزاز الإلكتروني</h2>
-        <p>إذا كنت تتعرض لتهديد أو ابتزاز عبر الإنترنت، فأنت لست وحدك. نحمي خصوصيتك ونرشدك بأمان.</p>
+        <p>لســت وحــدك. نحمي خصوصيتك ونرشدك في خطوات آمنة.</p>
     </div>
 
     <div class="card">
         <h3>خطوات عاجلة</h3>
         <ul>
             <li>لا ترد على المبتز</li>
-            <li>قم بحفظ لقطات شاشة كدليل</li>
+            <li>احتفظ بلقطات شاشة كدليل</li>
             <li>فعّل التحقق بخطوتين</li>
             <li>لا ترسل أي مال أو محتوى شخصي</li>
         </ul>
+    </div>
+
+    <div class="card">
+        <h3>اتصل بنا — سري وآمن</h3>
+        <form action="https://formsubmit.co/CyberShield-TN@proton.me" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="sent.html">
+
+            <label>بريدك الإلكتروني (اختياري)</label>
+            <input type="email" name="email" placeholder="contact@example.com" style="direction:ltr">
+
+            <label>رسالتك</label>
+            <textarea name="message" placeholder="اشرح وضعك بأمان..." required></textarea>
+
+            <button class="send" type="submit">إرسال</button>
+        </form>
     </div>
 </section>
 
@@ -176,8 +149,9 @@ window.onload = ()=> switchLang("en");
 
 <footer>
     © CyberRescue — Free Protection Against Blackmail<br>
-    Created by <strong>Ghariani Oussema</strong> — Tunisia
+    Made by <strong>Ghariani Oussema</strong> — Tunisia
 </footer>
 
 </body>
 </html>
+
