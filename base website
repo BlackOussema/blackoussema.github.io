@@ -1,0 +1,110 @@
+<!-- CyberRescue - Multilingual Site (EN/AR Switch) with Profile Photo -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberRescue</title>
+    <style>
+        :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#2b9fff}
+        *{box-sizing:border-box}
+        body{font-family:Inter, system-ui, Arial, sans-serif;margin:0;background:var(--bg);color:#e6eef8}
+        header{background:#081026;padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
+        header h1{margin:0;font-size:20px}
+        nav button{background:var(--accent);border:none;color:white;padding:8px 12px;margin-left:8px;border-radius:8px;cursor:pointer}
+        .container{max-width:980px;margin:28px auto;padding:20px}
+        .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:12px;margin-bottom:16px;border:1px solid rgba(255,255,255,0.03)}
+        .profile{display:flex;gap:18px;align-items:center}
+        .profile img{width:160px;height:160px;object-fit:cover;border-radius:12px;border:2px solid rgba(255,255,255,0.06)}
+        .profile .meta{max-width:720px}
+        .profile .meta h3{margin:0 0 6px 0}
+        .profile .meta p{margin:0;color:var(--muted)}
+        .signature{opacity:0.85;margin-top:10px;font-size:13px}
+        footer{text-align:center;margin-top:36px;padding:18px;background:#06101a}
+        .lang-switch{display:flex;align-items:center}
+        .caption{font-size:13px;color:var(--muted);margin-top:8px}
+        @media (max-width:640px){.profile{flex-direction:column;align-items:flex-start}.profile img{width:120px;height:120px}}
+    </style>
+    <script>
+        function switchLang(lang){
+            document.documentElement.lang = (lang === 'ar') ? 'ar' : 'en';
+            document.getElementById('en-section').style.display = (lang === 'en') ? 'block' : 'none';
+            document.getElementById('ar-section').style.display = (lang === 'ar') ? 'block' : 'none';
+        }
+        // set default language to English
+        window.addEventListener('DOMContentLoaded', ()=> switchLang('en'));
+    </script>
+</head>
+<body>
+    <header>
+        <h1>CyberRescue</h1>
+        <div class="lang-switch">
+            <button onclick="switchLang('en')">English</button>
+            <button onclick="switchLang('ar')">العربية</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- English Section -->
+        <section id="en-section">
+            <div class="card profile">
+                <!-- Replace the src with the uploaded image filename when you publish. Current path used in this project: '/mnt/data/🤍.jpg' -->
+                <img src="/mnt/data/🤍.jpg" alt="Gariani Oussema photo" />
+                <div class="meta">
+                    <h3>Gariani Oussema</h3>
+                    <p class="caption">Cybersecurity Specialist — Helping victims of online blackmail for free.</p>
+                    <p style="margin-top:10px;color:var(--muted)">I provide secure, anonymous guidance: evidence collection, account hardening, and steps to report to authorities. We never ask for intimate images or passwords.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Free Help Against Digital Blackmail</h2>
+                <p>If you are being threatened or blackmailed online, you are not alone. We will guide you safely, protect your privacy, and help you take action.</p>
+            </div>
+
+            <div class="card">
+                <h3>Immediate Safety Steps</h3>
+                <ul>
+                    <li>Do NOT reply to the blackmailer</li>
+                    <li>Take screenshots as evidence</li>
+                    <li>Enable 2-Factor Authentication</li>
+                    <li>Do NOT send money or personal content</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Arabic Section -->
+        <section id="ar-section" style="direction:rtl;text-align:right;display:none">
+            <div class="card profile">
+                <img src="/mnt/data/🤍.jpg" alt="صورة غرياني أسامة" />
+                <div class="meta">
+                    <h3>غرياني أسامة</h3>
+                    <p class="caption">مختص في الأمن السيبراني — أساعد ضحايا الابتزاز الإلكتروني مجانًا.</p>
+                    <p style="margin-top:10px;color:var(--muted)">أقدّم إرشادًا آمنًا وسريًا: جمع الأدلة، تأمين الحسابات، وخطوات الإبلاغ للجهات المختصة. لا نطلب صورًا خاصة ولا كلمات مرور.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>مساعدة مجانية ضد الابتزاز الإلكتروني</h2>
+                <p>إذا كنت تتعرض للتهديد أو الابتزاز عبر الإنترنت، فأنت لست وحدك. سنرشدك بأمان ونحمي خصوصيتك ونساعدك على اتخاذ الإجراءات الصحيحة.</p>
+            </div>
+
+            <div class="card">
+                <h3>خطوات عاجلة</h3>
+                <ul>
+                    <li>لا ترد على المبتز</li>
+                    <li>قم بتصوير المحادثات كدليل</li>
+                    <li>فعّل التحقق بخطوتين</li>
+                    <li>لا ترسل أي مال أو محتوى شخصي</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© CyberRescue — Free Protection Against Blackmail</p>
+        <p class="signature">Created by <strong>Gariani Oussema</strong> — Tunisia</p>
+    </footer>
+</body>
+</html>
